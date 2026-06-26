@@ -133,9 +133,13 @@
       padding: 80px 24px;
       position: relative;
       overflow: hidden;
+      background: var(--branco);
     }
 
-    .hero-bg {
+    .hero-bg { display: none; }
+    .hero-overlay { display: none; }
+
+    .hero-bg-hidden {
       position: absolute;
       inset: 0;
       z-index: 0;
@@ -194,7 +198,7 @@
     .hero h1 {
       font-size: clamp(40px, 11vw, 72px);
       font-weight: 900;
-      color: #fff;
+      color: var(--texto);
       letter-spacing: -2px;
       line-height: 1.05;
       margin-bottom: 44px;
@@ -205,7 +209,7 @@
     .hero-subheadline {
       font-size: clamp(15px, 3.6vw, 18px);
       font-weight: 600;
-      color: rgba(255,255,255,0.92);
+      color: var(--cinza);
       line-height: 1.4;
       max-width: 520px;
       margin: -8px auto 36px;
@@ -260,7 +264,7 @@
 
     .hero-resposta {
       font-size: 13px;
-      color: rgba(255,255,255,0.85);
+      color: var(--cinza);
       font-weight: 500;
       margin-bottom: 48px;
       display: flex;
@@ -271,8 +275,7 @@
 
     /* ── STATS ── */
     .stats {
-      border-top: 1px solid var(--borda);
-      border-bottom: 1px solid var(--borda);
+      background: var(--laranja);
       padding: 0 48px;
     }
 
@@ -282,12 +285,12 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1px;
-      background: var(--borda);
+      background: rgba(255,255,255,0.25);
     }
 
-    .stat { text-align: center; padding: 28px 16px; background: var(--branco); }
-    .stat-num { font-size: 28px; font-weight: 900; color: var(--laranja); letter-spacing: -1px; }
-    .stat-label { font-size: 12px; color: var(--cinza); margin-top: 2px; font-weight: 500; }
+    .stat { text-align: center; padding: 28px 16px; background: var(--laranja); }
+    .stat-num { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: -1px; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.9); margin-top: 2px; font-weight: 500; }
 
     /* ── SEÇÕES ── */
     .sec {
